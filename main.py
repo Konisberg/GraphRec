@@ -75,7 +75,7 @@ def main():
 
     if args.test:
         print('Load checkpoint and testing...')
-        ckpt = torch.load('best_checkpoint.pth.tar')
+        ckpt = torch.load('best_checkpoint.pth.tar', map_location=device)
         model.load_state_dict(ckpt['state_dict'])
         mae, rmse = validate(test_loader, model)
         print("Test: MAE: {:.4f}, RMSE: {:.4f}".format(mae, rmse))
