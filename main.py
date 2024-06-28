@@ -1,11 +1,3 @@
-#!/usr/bin/env python37
-# -*- coding: utf-8 -*-
-"""
-Created on 30 Sep, 2019
-
-@author: wangshuo
-"""
-
 import os
 import time
 import argparse
@@ -29,7 +21,7 @@ from model import GraphRec
 from dataloader import GRDataset
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_path', default='dataset/Ciao/', help='dataset directory path: datasets/Ciao/Epinions')
+parser.add_argument('--dataset_path', default='./dataset/Ciao/', help='dataset directory path: ./datasets/Ciao or ./datasets/Epinions')
 parser.add_argument('--batch_size', type=int, default=256, help='input batch size')
 parser.add_argument('--embed_dim', type=int, default=64, help='the dimension of embedding')
 parser.add_argument('--epoch', type=int, default=30, help='the number of epochs to train for')
